@@ -7,12 +7,10 @@
 
     $con = new mysqli($servernaam, $username, $password , $dbname);
 
-
-    if(isset($_POST['inloggen']))
+    if($con->connect_error)
     {
-        $sql = "INSERT INTO code(password) VALUES ('1234EE')";
+        die("Vebinding mislukt:" . $con->connect_error);
     }
-
 
 ?>
 
@@ -32,7 +30,6 @@
 <body>
 
 <div class="inlogcode">
-    <input type="submit" value="Stuur Code" class="inlogcode">
     <br>
     <label> Gebruikersnaam: <input type="text" name="GbNaam" class="inlogcode"></label>
     <br>
@@ -43,7 +40,7 @@
 
 </body>
 
-<footer>
+<footer style="margin-top: 100px">
     Powered by Leeuwenborgh
 </footer>
 </html>
