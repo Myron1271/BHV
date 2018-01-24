@@ -1,0 +1,20 @@
+html, body, footer
+{
+    background-color: darkslategray;
+    color: white;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+.inlogcode
+{
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+table
+{
+    width: 75%;
+    margin-top: 50px;
+}
