@@ -31,16 +31,16 @@
 
 <div class="inlogcode">
     <br>
-    <label> Gebruikersnaam: <input type="text" name="GbNaam" class="inlogcode"></label>
+    <label>Gebruikersnaam:<br><input type="text" name="GbNaam" class="label-normal"></label>
+    <br><br>
+    <label>Wachtwoord:<br><input type="text" name="Wachtwoord" class="label-normal"></label>
     <br>
-    <label> Wachtwoord: <input type="text" name="Wachtwoord" class="inlogcode"></label>
-    <br>
-<input type="submit" name="inloggen" class="inlogcode" value="Inloggen">
+    <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
 </div>
 
 </body>
 
-<footer style="margin-top: 100px">
+<footer>
     Powered by Leeuwenborgh
 </footer>
 </html>

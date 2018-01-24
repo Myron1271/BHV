@@ -6,6 +6,12 @@ html, body, footer
     text-align: center;
 }
 
+.label-normal {
+    font-size: 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
 .inlogcode
 {
     margin-top: 100px;
@@ -13,8 +19,30 @@ html, body, footer
     font-size: 50px;
 }
 
+.btn-normal
+{
+    background-color: cadetblue;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 50px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.btn-normal:hover
+{
+    background-color: mediumturquoise;
+}
+
 table
 {
     width: 75%;
     margin-top: 50px;
+}
+
+footer
+{
+    margin-top: 100px;
+    opacity: 0.5;
 }
