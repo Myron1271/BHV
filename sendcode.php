@@ -44,7 +44,7 @@
 </head>
 <body>
 
-<form action="registratie.php" method="POST">
+<form action="sendcode.php" method="POST">
 <div class="inlogcode">
     <input type="submit" name="codeverzenden" value="Stuur Code" class="btn-normal">
 </div>
