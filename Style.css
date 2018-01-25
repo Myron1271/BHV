@@ -6,7 +6,14 @@ html, body, footer
     text-align: center;
 }
 
-.label-normal {
+table
+{
+    width: 75%;
+    margin-top: 50px;
+}
+
+.label-normal
+{
     font-size: 50px;
     text-align: center;
     border-radius: 20px;
@@ -14,7 +21,7 @@ html, body, footer
 
 .inlogcode
 {
-    margin-top: 100px;
+    margin-top: 150px;
     font-weight: bold;
     font-size: 50px;
 }
@@ -22,9 +29,9 @@ html, body, footer
 .btn-normal
 {
     background-color: cadetblue;
-    width: 150px;
-    height: 50px;
-    font-size: 30px;
+    width: 250px;
+    height: 75px;
+    font-size: 40px;
     margin-top: 50px;
     font-weight: bold;
     border-radius: 15px;
@@ -33,16 +40,4 @@ html, body, footer
 .btn-normal:hover
 {
     background-color: mediumturquoise;
-}
-
-table
-{
-    width: 75%;
-    margin-top: 50px;
-}
-
-footer
-{
-    margin-top: 100px;
-    opacity: 0.5;
 }
