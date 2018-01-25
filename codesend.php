@@ -1,7 +1,7 @@
 <?php
 
     $random = rand(1000, 3000);
-    Echo "$random";
+    //Echo "$random";
 
     $servernaam = 'localhost';
     $username = 'root';
@@ -15,45 +15,21 @@
         die("Vebinding mislukt:" . $con->connect_error);
     }
 
+    //timer variable
+    $vervallen = true;
+
     if(isset($_POST['codeverzenden']))
     {
-        $sql = "UPDATE administratie SET code='$random' WHERE id=1";
+        $sql = "UPDATE administratie SET code='".$random."' WHERE id=1";
 
         if (mysqli_query($con, $sql))
         {
-            echo "<br>";
-            Echo "Code Verzonden";
 
+            //timer;
+            $vervallen = false;
             //nieuwe lijn voor tijd update
             $sql3 = "UPDATE php_cron SET last_ts = NOW() WHERE id=1";
             mysqli_query($con, $sql3) or die("[3] MySQL ERROR: ".mysqli_error());
 
         }
     }
-
-?>
-
-<!doctype html>
-<html lang="nl">
-<head>
-
-    <link rel="stylesheet" href="Style.css" type="text/css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Code verzenden</title>
-
-</head>
-<body>
-
-<form action="codesend.php" method="POST">
-<div class="inlogcode">
-    <input type="submit" name="codeverzenden" value="Stuur Code" class="btn-normal">
-</div>
-</form>
-
-</body>
-</html>

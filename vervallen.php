@@ -1,11 +1,10 @@
 <?php
-include 'timecheck.php';
-if ($vervallen == true)
+include 'codesend.php';
+if ($vervallen == false)
 {
-header("Location: vervallen.php");
+    header("Location: login.php");
 }
 ?>
-
 <!doctype html>
 <head>
 
@@ -22,13 +21,10 @@ header("Location: vervallen.php");
 <body>
 
 <div class="inlogcode">
-    <label>Code:
+    <form action='#' method='POST'>
+        <label>Code is verlopen :(</label>
         <br>
-        <input type="password" name="code" class="label-normal" required>
-    </label>
-    <br>
-    <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
+        <input class="btn-normal" type="submit" name="codeverzenden" value="Verzend een nieuwe code">
+    </form>
 </div>
-
 </body>
-</html>

@@ -11,7 +11,7 @@ $sql1 = "SELECT TIME_TO_SEC(TIMEDIFF(NOW(), last_ts)) AS tdif FROM php_cron WHER
 $res1 = mysqli_query($con, $sql1) or die("[1] MySQL ERROR: ".mysqli_error());
 $dif = mysqli_fetch_assoc($res1);
 $tdif = implode($dif);
-
+$vervallen = '';
 
 //vul hier tijd in seconden in
 if ($tdif >= 5)
@@ -20,11 +20,6 @@ if ($tdif >= 5)
     mysqli_query($con, $sql3) or die("[3] MySQL ERROR: ".mysqli_error());*/
 
     $vervallen = true;
-}
-
-else
-{
-    $vervallen = false;
 }
 
 /*database:
