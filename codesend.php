@@ -44,7 +44,7 @@
 </head>
 <body>
 
-<form action="sendcode.php" method="POST">
+<form action="codesend.php" method="POST">
 <div class="inlogcode">
     <input type="submit" name="codeverzenden" value="Stuur Code" class="btn-normal">
 </div>
