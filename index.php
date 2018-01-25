@@ -30,7 +30,7 @@
 <body>
 
 <div class="inlogcode">
-    <label>Code:<br><input type="password" name="code" class="label-normal"></label>
+    <label>Code:<br><input type="password" name="code" class="label-normal" required></label>
     <br>
     <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
 </div>
