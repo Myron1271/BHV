@@ -1,17 +1,6 @@
 <?php
-
-    $servernaam = 'localhost';
-    $username = 'root';
-    $password = '';
-    $dbname = 'bhvtest';
-
-    $con = new mysqli($servernaam, $username, $password , $dbname);
-
-    if($con->connect_error)
-    {
-        die("Vebinding mislukt:" . $con->connect_error);
-    }
-
+include 'codesend.php';
+include 'timecheck.php';
 ?>
 
 <!doctype html>
@@ -30,9 +19,14 @@
 <body>
 
 <div class="inlogcode">
-    <label>Code:<br><input type="password" name="code" class="label-normal" required></label>
-    <br>
-    <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
+    <?php if ($vervallen == false)
+    {
+        echo "<label>Code:<br><input type=\"password\" name=\"code\" class=\"label-normal\" required></label> <br> <input class=\"btn-normal\" type=\"submit\" name=\"inloggen\" value=\"Inloggen\">";
+    }
+    else
+    {
+        echo "<label>Code is verlopen :(</label> <br> <input class=\"btn-normal\" type=\"submit\" name=\"codeverzenden\" value=\"Verzend een nieuwe code\"> ";
+    }?>
 </div>
 
 </body>

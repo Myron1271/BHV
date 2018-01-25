@@ -29,7 +29,7 @@ table
 .btn-normal
 {
     background-color: cadetblue;
-    width: 250px;
+    width: auto;
     height: 75px;
     font-size: 40px;
     margin-top: 50px;
