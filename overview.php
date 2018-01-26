@@ -1,5 +1,4 @@
 <?php
-
     $servernaam = 'localhost';
     $username = 'root';
     $password = '';
@@ -10,17 +9,6 @@
     $sql = 'SELECT id, naam, email, telefoonnummer, actief FROM gebruikers';
     $overzicht = mysqli_query($con, $sql);
 
-    if (mysqli_num_rows($overzicht) > 0)
-    {
-        while ($row = mysqli_fetch_assoc($overzicht))
-        {
-            Echo "<b> Naam: </b>" .$row['naam'], "<br> <b> Email: </b>" .$row['email'], "<b><br> Telefoonnummer: </b>" .$row['telefoonnummer'];
-        }
-    }
-    else
-    {
-        Echo "Geen gebruikers";
-    }
 
 ?>
 
@@ -40,16 +28,21 @@
     <body>
 
     <div class="overzicht">
-        <table>
-            <tr>
-                <th><h1>Naam:</h1></th>
-                <th><h1>Email:</h1></th>
-            </tr>
-            <tr>
-                <td>Myron</td>
-                <td>m.seelen@leeuwenborgh.nl</td>
-            </tr>
-        </table>
+        <?php
+        if (mysqli_num_rows($overzicht) > 0)
+        {
+            echo "<table> <tr> <th><h1>Naam:</h1></th> <th><h1>Email:</h1></th> <th><h1>Telefoonnummer:</h1></th> </tr>";
+            while ($row = mysqli_fetch_assoc($overzicht))
+            {
+                Echo "<tr> <td>".$row['naam'],"</td> <td>".$row['email'],"</td> <td>".$row['telefoonnummer']."</td> </tr>";
+            }
+            echo "</table>";
+        }
+        else
+        {
+            Echo "Geen gebruikers";
+        }
+        ?>
     </div>
 
     </body>

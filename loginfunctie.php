@@ -23,6 +23,7 @@ if (isset($_POST["inloggen"])){
     if(mysqli_num_rows($result) > 0 ){
 
         echo "Succesvol Ingelogd!";
+        header("Location: overview.php");
 
     }
     else{
