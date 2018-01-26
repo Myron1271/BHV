@@ -1,5 +1,28 @@
-    <?php
-    ?>
+<?php
+
+    $servernaam = 'localhost';
+    $username = 'root';
+    $password = '';
+    $dbname = 'bhv';
+
+    $con = new mysqli($servernaam, $username, $password , $dbname);
+
+    $sql = 'SELECT id, naam, email, telefoonnummer, actief FROM gebruikers';
+    $overzicht = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($overzicht) > 0)
+    {
+        while ($row = mysqli_fetch_assoc($overzicht))
+        {
+            Echo "<b> Naam: </b>" .$row['naam'], "<br> <b> Email: </b>" .$row['email'], "<b><br> Telefoonnummer: </b>" .$row['telefoonnummer'];
+        }
+    }
+    else
+    {
+        Echo "Geen gebruikers";
+    }
+
+?>
 
     <!doctype html>
     <html lang="nl">
