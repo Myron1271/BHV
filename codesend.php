@@ -27,7 +27,6 @@
 
             //timer;
             $vervallen = false;
-            //nieuwe lijn voor tijd update
             $sql3 = "UPDATE php_cron SET last_ts = NOW() WHERE id=1";
             mysqli_query($con, $sql3) or die("[3] MySQL ERROR: ".mysqli_error());
 

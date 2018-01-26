@@ -1,4 +1,5 @@
 <?php
+include 'loginfunctie.php';
 include 'timecheck.php';
 if ($vervallen == true)
 {
@@ -20,7 +21,7 @@ header("Location: vervallen.php");
 
 </head>
 <body>
-
+<form action="login.php" method="post">
 <div class="inlogcode">
     <label>Code:
         <br>
@@ -29,6 +30,7 @@ header("Location: vervallen.php");
     <br>
     <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
 </div>
+</form>
 
 </body>
 </html>
