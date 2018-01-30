@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'loginfunctie.php';
 include 'timecheck.php';
 if ($vervallen == true)

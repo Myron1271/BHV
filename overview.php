@@ -1,4 +1,8 @@
 <?php
+if ($_SESSION['gebruiker'] =! 1)
+{
+    header("Location: login.php");
+}
     $servernaam = 'localhost';
     $username = 'root';
     $password = '';

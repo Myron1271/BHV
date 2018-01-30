@@ -21,10 +21,8 @@ if (isset($_POST["inloggen"])){
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($result) > 0 ){
-
-        echo "Succesvol Ingelogd!";
+        $_SESSION['gebruiker'] = 1;
         header("Location: overview.php");
-
     }
     else{
 
