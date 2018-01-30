@@ -8,7 +8,7 @@ $con = new mysqli($servernaam, $username, $password , $dbname);
 
 
 $sql1 = "SELECT TIME_TO_SEC(TIMEDIFF(NOW(), last_ts)) AS tdif FROM php_cron WHERE id=1";
-$res1 = mysqli_query($con, $sql1) or die("[1] MySQL ERROR: ".mysqli_error());
+$res1 = mysqli_query($con, $sql1) or die("[1] MySQL ERROR: ".mysqli_error($con));
 $dif = mysqli_fetch_assoc($res1);
 $tdif = implode($dif);
 $vervallen = '';
