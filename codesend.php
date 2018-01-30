@@ -15,9 +15,6 @@
         die("Vebinding mislukt:" . $con->connect_error);
     }
 
-    //timer variable
-    $vervallen = true;
-
     if(isset($_POST['codeverzenden']))
     {
         $sql = "UPDATE administratie SET code='".$random."' WHERE id=1";
@@ -26,7 +23,7 @@
         {
 
             //timer;
-            $vervallen = false;
+            $_SESSION['vervallen'] = false;
             $sql3 = "UPDATE php_cron SET last_ts = NOW() WHERE id=1";
             mysqli_query($con, $sql3) or die("[3] MySQL ERROR: ".mysqli_error());
 

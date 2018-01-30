@@ -21,8 +21,7 @@ if (isset($_POST["inloggen"])){
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($result) > 0 ){
-        $_SESSION['gebruiker'] = 1;
-        header("Location: overview.php");
+        $_SESSION["gebruiker"] = 1;
     }
     else{
 

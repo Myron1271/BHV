@@ -1,6 +1,11 @@
 <?php
+error_reporting( error_reporting() & ~E_NOTICE );
+session_start();
 include 'codesend.php';
-if ($vervallen == false)
+if ($_SESSION['gebruiker'] == 1) {
+    header("Location: overview.php");
+}
+if ($_SESSION['vervallen'] == false)
 {
     header("Location: login.php");
 }
