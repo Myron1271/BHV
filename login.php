@@ -36,8 +36,5 @@ if ($_SESSION['gebruiker'] == 1) {
     <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
 </div>
 </form>
-<?php
-print_r($_SESSION); ?>
-
 </body>
 </html>
