@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'uitloggen.php';
 if ($_SESSION["gebruiker"] != 1)
 {
     header("Location: login.php");
@@ -49,6 +50,8 @@ if ($_SESSION["gebruiker"] != 1)
         }
         ?>
     </div>
-
+    <form action="" method="POST">
+         <input class="btn-normal" type="submit" name="uitloggen" value="Uitloggen">
+    </form>
     </body>
     </html>
