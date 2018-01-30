@@ -27,7 +27,7 @@ if ($_SESSION['vervallen'] == false)
 
 <div class="inlogcode">
     <form action='#' method='POST'>
-        <label>Code is verlopen :(</label>
+        <label>De Code is helaas verlopen </label>
         <br>
         <input class="btn-normal" type="submit" name="codeverzenden" value="Verzend een nieuwe code">
     </form>
