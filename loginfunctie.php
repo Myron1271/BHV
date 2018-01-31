@@ -1,9 +1,10 @@
 <?php
 
-$servernaam = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bhv';
+$servernaam = 'sql11.freemysqlhosting.net';
+$username = 'sql11218706';
+$password = 'IiJ6svZtMt';
+$dbname = 'sql11218706';
+
 
 $conn = new mysqli($servernaam, $username, $password , $dbname);
 
