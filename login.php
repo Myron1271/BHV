@@ -2,11 +2,6 @@
 error_reporting( error_reporting() & ~E_NOTICE );
 session_start();
 include 'loginfunctie.php';
-include 'timecheck.php';
-if ($_SESSION['vervallen'] == true)
-{
-    header("Location: vervallen.php");
-}
 if ($_SESSION['gebruiker'] == 1) {
     header("Location: overview.php");
 }
