@@ -38,10 +38,10 @@ if ($_SESSION["gebruiker"] != 1)
         <?php
         if (mysqli_num_rows($overzicht) > 0)
         {
-            echo "<table><tr><th><h1>Naam:</h1></th><th><h1>Email:</h1></th><th><h1>Telefoonnummer:</h1></th><th><h1>Aanwezig</h1></th></tr>";
+            echo "<table><tr><th><h1>Naam:</h1></th><th><h1>Email:</h1></th><th><h1>Telefoonnummer:</h1></th><th><h1>Aanwezig:</h1></th></tr>";
             while ($row = mysqli_fetch_assoc($overzicht))
             {
-                Echo "<tr><td><br>".$row['naam'],"</td><td>".$row['email'],"</td><td>".$row['telefoonnummer']."</td><td>Ja</td></tr>";
+                Echo "<tr><td><br>".$row['naam'],"</td><td>".$row['email'],"</td><td>".$row['telefoonnummer']."</td><td>".$row['actief']."</td></tr>";
             }
             echo "</table>";
         }
