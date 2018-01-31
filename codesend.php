@@ -17,7 +17,18 @@
 
     if(isset($_POST['codeverzenden']))
     {
-        $sql = "UPDATE administratie SET code='".$random."' WHERE id=1";
+
+
+// the message
+        $msg = "Beste Gebruiker, \n De code is: $random";
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg,70);
+
+        // send email
+        mail("sssssssss@live.nl","BHV Code",$msg);
+
+    $sql = "UPDATE administratie SET code='".$random."' WHERE id=1";
 
         if (mysqli_query($con, $sql))
         {
