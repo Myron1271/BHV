@@ -34,10 +34,10 @@ if ($_SESSION['gebruiker'] == 1) {
     </label>
     <br>
     <input class="btn-normal" type="submit" name="inloggen" value="Inloggen">
+</div>
 </form>
 <form action="login.php" method="post">
     <input class="btn-normal" type="submit" name="sendmail" value="Code versturen">
 </form>
-</div>
 </body>
 </html>

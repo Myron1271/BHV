@@ -32,7 +32,17 @@ if (isset($_POST["inloggen"])){
 
 }
 if (isset($_POST["sendmail"])) {
-    $msg = "Beste Gebruiker, \n De code is: $random";
+
+    global $conn;
+    $sql = "SELECT code FROM administratie WHERE id = '1' ";
+    $result = mysqli_query($conn, $sql);
+
+    $row = mysqli_fetch_array($result);
+    $row = implode($row);
+    $row = substr($row, 4);
+
+
+    $msg = "Beste Gebruiker, \n De code is: '".$row."'  ";
 
     // use wordwrap() if lines are longer than 70 characters
     $msg = wordwrap($msg,70);

@@ -1,6 +1,6 @@
 <?php
 
-    $random = rand(1000, 3000);
+    $random = rand(1000, 9999);
     //Echo "$random";
 
     $servernaam = 'sql11.freemysqlhosting.net';
