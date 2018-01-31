@@ -31,6 +31,17 @@ if (isset($_POST["inloggen"])){
     }
 
 }
+if (isset($_POST["sendmail"])) {
+    $msg = "Beste Gebruiker, \n De code is: $random";
+
+    // use wordwrap() if lines are longer than 70 characters
+    $msg = wordwrap($msg,70);
+
+    // send email
+    mail("sssssssss@live.nl","BHV Code",$msg);
+    echo "De code is verzonden";
+}
+
 
 
 ?>
