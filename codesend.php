@@ -19,6 +19,7 @@
     {
 
 
+
 // the message
         $msg = "Beste Gebruiker, \n De code is: $random";
 
